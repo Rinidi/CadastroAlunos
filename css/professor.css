@@ -27,3 +27,11 @@ footer {
     background-color: rgb(233, 233, 233);
     margin: 3px;
 }
+
+.icon {
+    margin-left: 5px;
+}
+
+#btn-white {
+    font: normal 16pt color: white;
+}

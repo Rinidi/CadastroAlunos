@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('control/verifica_login.php');
-include('conexao.php');
+include('control/conexao.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -40,8 +40,8 @@ include('conexao.php');
                     <tbody>
                         <?php
                         $query = "SELECT * FROM alunos";
-                        $row = mysqli_query($conexao, $query);
-                        while (mysqli_fetch_array($row)) {
+                        $sql = mysqli_query($conexao, $query);
+                        while ($row = mysqli_fetch_array($sql)) {
                             ?>
                             <tr>
                                 <th scope="row"><?php echo $row['id']; ?></th>
@@ -49,9 +49,9 @@ include('conexao.php');
                                 <td><?php echo $row['cpf']; ?></td>
                                 <td><?php echo $row['curso']; ?></td>
                                 <td>
-                                <a href="#"><img src="../img/pencil-icon.png"/></a>
-                                <a href="#"><img src="../img/eraser-icon.png"/></a>
-                                <a href="#"><img src="../img/cross-icon.png"/></a>
+                                    <a href="#"><img class="icon" src="../img/pencil-icon.png" /></a>
+                                    <a href="#"><img class="icon" src="../img/eraser-icon.png" /></a>
+                                    <a href="#"><img class="icon" src="../img/cross-icon.png" /></a>
                                     </th>
                             </tr>
                         <?php } ?>
@@ -59,7 +59,7 @@ include('conexao.php');
                 </table>
                 <div class="row justify-content-end">
                     <div class="col-4 col-xl-3 col-lg-3 col-md-4 col-sm-4">
-                        <a class="button is-dark">Cadastrar Usuário</a>
+                        <a href="cadastrar-aluno.php" id="btn-login" class="btn btn-secondary" role="button">Cadastrar Usuário</a>
                     </div>
                 </div>
             </div>
