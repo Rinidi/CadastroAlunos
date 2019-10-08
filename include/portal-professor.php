@@ -49,9 +49,8 @@ include('control/conexao.php');
                                 <td><?php echo $row['cpf']; ?></td>
                                 <td><?php echo $row['curso']; ?></td>
                                 <td>
-                                    <a href="#"><img class="icon" src="../img/pencil-icon.png" /></a>
-                                    <a href="#"><img class="icon" src="../img/eraser-icon.png" /></a>
-                                    <a href="#"><img class="icon" src="../img/cross-icon.png" /></a>
+                                    <a href="editar.php?id=<?php echo $row['id'];?>"><img class="icon" src="../img/pencil-icon.png" /></a>
+                                    <a href="excluir.php?id=<?php echo $row['id'];?>"><img class="icon" src="../img/cross-icon.png" /></a>
                                     </th>
                             </tr>
                         <?php } ?>
